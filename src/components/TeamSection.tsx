@@ -45,10 +45,10 @@ const TeamSection: React.FC = () => {
     },
     {
       id: 5,
-      name: "Deborah Olanrewaju",
+      name: "Caroline Owolawi",
       image: deborah,
       role: "Finance Manager",
-      description: "Deborah manages all financial aspects of our campaigns, ensuring optimal budget allocation and ROI for every package.",
+      description: "Caroline manages all financial aspects of our campaigns, ensuring optimal budget allocation and ROI for every package.",
     },
   ];
 
