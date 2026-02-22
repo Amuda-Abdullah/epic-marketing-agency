@@ -57,7 +57,7 @@ const AuthorsSection: React.FC = () => {
     {
       id: 6,
       name: "M.L. Scott",
-      genre: "Mystery",
+      genre: "Humor & Entertainment",
       books: "6 Books",
       status: "Kindle Unlimited",
       color: "from-indigo-500 to-indigo-600",
