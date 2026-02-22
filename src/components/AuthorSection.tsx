@@ -8,7 +8,6 @@ interface Author {
   id: number;
   name: string;
   genre: string;
-  books: string;
   status: string;
   color: string;
 }
@@ -22,7 +21,6 @@ const AuthorsSection: React.FC = () => {
       id: 1,
       name: "Donal Ryan",
       genre: "Literature & Fiction",
-      books: "34 Books",
       status: "Amazon Bestseller",
       color: "from-blue-500 to-blue-600",
       link: "https://www.amazon.com/stores/Donal-Ryan/author/B00CMAYTPI?ref=ap_rdr&shoppingPortalEnabled=true"
@@ -31,25 +29,14 @@ const AuthorsSection: React.FC = () => {
       id: 2,
       name: "J. D. Kinnest",
       genre: "Humor & Entertainment",
-      books: "14 Books",
       status: "Best Seller",
       color: "from-amber-500 to-amber-600",
       link: "https://www.amazon.com/stores/J.-D.-Kinnest/author/B09SY9V53N?ref=ap_rdr&shoppingPortalEnabled=true"
     },
     {
-      id: 3,
-      name: "Madison Love",
-      genre: "Religion & Spirituality",
-      books: "24 Books",
-      status: "Kindle Unlimited",
-      color: "from-pink-500 to-pink-600",
-      link: "https://www.amazon.com/stores/author/B0CH7JPF6K?ingress=0&visitId=54828a9f-e1cd-4c44-af6c-f959ab952703&ref_=ap_rdr"
-    },
-    {
       id: 4,
       name: "Emma Greene",
       genre: "Children's Books",
-      books: "5 Books",
       status: "Best Seller",
       color: "from-purple-500 to-purple-600",
       link: "https://www.amazon.com/stores/Emma-Greene/author/B0CQ63R25V?ref=ap_rdr&shoppingPortalEnabled=true"
@@ -58,7 +45,6 @@ const AuthorsSection: React.FC = () => {
       id: 6,
       name: "M.L. Scott",
       genre: "Humor & Entertainment",
-      books: "6 Books",
       status: "Kindle Unlimited",
       color: "from-indigo-500 to-indigo-600",
       link: "https://www.amazon.com/stores/M.L.-Scott/author/B0G4LMX4S9?ref=ap_rdr&shoppingPortalEnabled=true"
@@ -67,7 +53,6 @@ const AuthorsSection: React.FC = () => {
       id: 7,
       name: "Park Kara",
       genre: "Science Fiction & Fantasy",
-      books: "7 Books",
       status: "Kindle Unlimited",
       color: "from-yellow-500 to-yellow-600",
       link: "https://www.amazon.com/stores/Park-Kara/author/B0D6472KM5?ref=sr_ntt_srch_lnk_1&qid=1756417887&sr=1-1&isDramIntegrated=true&shoppingPortalEnabled=true"
@@ -76,7 +61,6 @@ const AuthorsSection: React.FC = () => {
       id: 9,
       name: "Shubham K. Singh",
       genre: "Self-Help",
-      books: "5 Books",
       status: "Kindle Unlimited",
       color: "from-gray-500 to-gray-600",
       link: "https://www.amazon.com/stores/Shubham-K.-Singh/author/B0D1YQTYZ8?ref=ap_rdr&shoppingPortalEnabled=true"
@@ -85,7 +69,6 @@ const AuthorsSection: React.FC = () => {
       id: 10,
       name: "Stephen J. Ellis",
       genre: "Children's Books",
-      books: "9 Books",
       status: "Best Seller",
       color: "from-green-500 to-green-600",
       link: "https://www.amazon.com/stores/Stephen-J.-Ellis/author/B09G37ZBPM?ref=ap_rdr&shoppingPortalEnabled=true"
@@ -164,9 +147,6 @@ const AuthorsSection: React.FC = () => {
                       </span>
                     </div>
                     <div className="space-y-2">
-                      <div className="text-gray-600">
-                        <span className="font-medium">{author.books}</span>
-                      </div>
                       <div className="text-sm text-gray-500">
                         {author.status}
                       </div>
