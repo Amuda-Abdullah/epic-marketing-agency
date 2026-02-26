@@ -95,12 +95,15 @@ const TeamSection: React.FC = () => {
                   <img
                     src={member.image}
                     alt={member.name}
+                    draggable="false"
                     className="w-full object-cover"
+                    onContextMenu={(e) => e.preventDefault()} 
+
                   />
                 )}
 
                 {/* Color Reveal on Hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#d4af377a] to-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#d4af377a] to-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500" onContextMenu={(e) => e.preventDefault()} />
                 
                 {/* Social Icons */}
                 <div className="absolute bottom-4 right-4 flex gap-2">
