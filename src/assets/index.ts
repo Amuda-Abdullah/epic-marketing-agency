@@ -6,4 +6,5 @@ export { default as marcus } from "./marcus.jpg";
 export { default as epic } from "./epic.png";
 export { default as deborah } from "./deborah.jpg";
 export { default as hero } from "./hero.png";
+export { default as jd } from "./jd.png";
 

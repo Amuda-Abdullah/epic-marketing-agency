@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { GoDotFill } from "react-icons/go";
 import { SiGmail } from "react-icons/si";
-import { david, deborah, emily, marcus, sarah } from "../assets";
+import { david, deborah, emily, jd, marcus, sarah } from "../assets";
 
 interface TeamMember {
   id: number;
@@ -63,12 +63,12 @@ const TeamSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-             <div className="text-[#d4af37] font-semibold tracking-wider uppercase text-sm flex items-center justify-center mb-4">
-                      <span className="">
-                      <GoDotFill />
-                      </span>
-                        TEAM
-                    </div>
+          <div className="text-[#d4af37] font-semibold tracking-wider uppercase text-sm flex items-center justify-center mb-4">
+            <span className="">
+              <GoDotFill />
+            </span>
+            TEAM
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Meet the Experts Behind Your Success
           </h2>
@@ -90,21 +90,22 @@ const TeamSection: React.FC = () => {
             >
               {/* Image Container with Hover Effect */}
               <div className="mb-6 relative overflow-hidden rounded-xl">
-                {/* Black & White Image */}
                 {member.image && (
                   <img
                     src={member.image}
                     alt={member.name}
                     draggable="false"
                     className="w-full object-cover"
-                    onContextMenu={(e) => e.preventDefault()} 
-
+                    onContextMenu={(e) => e.preventDefault()}
                   />
                 )}
 
                 {/* Color Reveal on Hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#d4af377a] to-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500" onContextMenu={(e) => e.preventDefault()} />
-                
+                <div
+                  className="absolute inset-0 bg-gradient-to-br from-[#d4af377a] to-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  onContextMenu={(e) => e.preventDefault()}
+                />
+
                 {/* Social Icons */}
                 <div className="absolute bottom-4 right-4 flex gap-2">
                   <div className="bg-white p-2 rounded-full opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-2 transition-all duration-300 delay-100">
@@ -118,16 +119,49 @@ const TeamSection: React.FC = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-2 transition-colors duration-300">
                   {member.name}
                 </h3>
-                <p className="text-[#d4af37] font-medium mb-4">
-                  {member.role}
-                </p>
-                <p className="text-gray-600 leading-relaxed">
-                  {member.description}
-                </p>
+                <p className="text-[#d4af37] font-medium mb-4">{member.role}</p>
+                <p className="text-gray-600 leading-relaxed">{member.description}</p>
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* JD Firms — Parent Entity Divider */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-20"
+        >
+          <div className="flex items-center gap-4 mb-8">
+            <div className="flex-1 h-px bg-gray-200" />
+            <span className="text-xs font-semibold tracking-widest uppercase text-gray-400">
+              Parent Entity
+            </span>
+            <div className="flex-1 h-px bg-gray-200" />
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center gap-6 bg-gray-50 border border-gray-200 rounded-2xl px-8 py-7">
+            <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-white border border-gray-200 shadow-sm flex items-center justify-center overflow-hidden">
+                  <img src={jd} alt="JD Firms" className="w-full h-full object-contain" />
+            </div>
+
+            {/* Text */}
+            <div className="text-center sm:text-left">
+              <div className="flex items-center gap-2 justify-center sm:justify-start mb-1">
+                <h3 className="text-lg font-bold text-gray-900">JD Firms</h3>
+                <span className="text-xs font-medium bg-[#d4af3720] text-[#b8962e] px-2 py-0.5 rounded-full border border-[#d4af3740]">
+                  Parent Company
+                </span>
+              </div>
+              <p className="text-sm text-gray-500 max-w-xl">
+                All payments are processed and received through <span className="font-medium text-gray-700">JD Firms</span>, our parent company and authorized payment entity. This ensures secure, compliant, and transparent transactions for every client engagement.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );
