@@ -19,11 +19,11 @@ const AuthorsSection: React.FC = () => {
   const authors: Author[] = [
     {
       id: 1,
-      name: "Donal Ryan",
-      genre: "Literature & Fiction",
+      name: "Leigh Olsen",
+      genre: "Children's Books",
       status: "Amazon Bestseller",
       color: "from-blue-500 to-blue-600",
-      link: "https://www.amazon.com/stores/Donal-Ryan/author/B00CMAYTPI?ref=ap_rdr&shoppingPortalEnabled=true"
+      link: "amazon.com/stores/Leigh-Olsen/author/B001JSBFKG?ref=ap_rdr&shoppingPortalEnabled=true"
     },
     {
       id: 2,
@@ -35,19 +35,19 @@ const AuthorsSection: React.FC = () => {
     },
     {
       id: 4,
-      name: "Emma Greene",
-      genre: "Children's Books",
+      name: "Edmund J. Bourne",
+      genre: "Self-Help",
       status: "Best Seller",
       color: "from-purple-500 to-purple-600",
-      link: "https://www.amazon.com/stores/Emma-Greene/author/B0CQ63R25V?ref=ap_rdr&shoppingPortalEnabled=true"
+      link: "https://www.amazon.com/stores/Edmund-J.-Bourne/author/B001JRWW9A?_encoding=UTF8&pd_rd_w=syMiM&content-id=amzn1.sym.7e190e19-9f6f-4df8-807a-5a7608594741&pd_rd_wg=Zz0IV&pd_rd_r=a52010c5-050f-42b7-9bf3-4c24a99fb193&ref=ap_rdr&shoppingPortalEnabled=true&ccs_id=70945ee0-6a3d-438e-b053-4e454516a119"
     },
     {
       id: 6,
-      name: "M.L. Scott",
-      genre: "Humor & Entertainment",
+      name: "Jason W. Kan",
+      genre: "Sports & Outdoors",
       status: "Kindle Unlimited",
       color: "from-indigo-500 to-indigo-600",
-      link: "https://www.amazon.com/stores/M.L.-Scott/author/B0G4LMX4S9?ref=ap_rdr&shoppingPortalEnabled=true"
+      link: "https://www.amazon.com/stores/Jason-W.-Kan/author/B0GLMSYMDP?ref=ap_rdr&shoppingPortalEnabled=true&ccs_id=63c2c5fc-c4b3-4c04-b7ff-37210f93d455"
     },
     {
       id: 7,
