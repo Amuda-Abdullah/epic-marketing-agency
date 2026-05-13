@@ -1,18 +1,18 @@
 // components/Footer.tsx
 import React from "react";
 import { motion } from "framer-motion";
-import { FaWhatsapp } from "react-icons/fa";
+// import { FaWhatsapp } from "react-icons/fa";
 import { logo } from "../assets";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  const whatsappRedirect = () => {
-    const whatsappNumber = "19145832115";
-    const message = "Hello, I need assistance for my book to get seen!";
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-    // In a web app, you typically navigate to the URL
-    window.location.href = whatsappUrl;
-  };
+  // const whatsappRedirect = () => {
+  //   const whatsappNumber = "19145832115";
+  //   const message = "Hello, I need assistance for my book to get seen!";
+  //   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  //   // In a web app, you typically navigate to the URL
+  //   window.location.href = whatsappUrl;
+  // };
 
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-black text-white">
@@ -75,14 +75,14 @@ const Footer: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
+              {/* <h4 className="text-lg font-semibold mb-4">Connect With Us</h4> */}
               <div className="space-y-4">
                 {/* Social Media */}
-                <div className="flex gap-4 mb-6">
+                {/* <div className="flex gap-4 mb-6">
                  <button onClick={whatsappRedirect} className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-green-500 transition-all duration-300 transform hover:scale-110">
                     <FaWhatsapp />
                   </button>
-                </div>
+                </div> */}
 
                
               </div>

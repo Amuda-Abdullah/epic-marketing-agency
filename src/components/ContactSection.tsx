@@ -7,18 +7,18 @@ import { FaTimes, FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import { GoDotFill } from "react-icons/go";
 
 const ContactSection: React.FC = () => {
-  const formId = import.meta.env.VITE_FORMSPREE_ID;
+  const formId = import.meta.env.VITE_FORMSPREE_ID || "";
+  const [state, handleSubmit] = useForm(formId);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [messageCount, setMessageCount] = useState(0);
 
   if (!formId) {
     console.error("Missing Formspree ID - Check .env file");
     return <div className="text-red-500">Configuration Error</div>;
   }
 
-  const [state, handleSubmit] = useForm(formId);
-  const [showSuccess, setShowSuccess] = useState(false);
-  const [messageCount, setMessageCount] = useState(0);
-
   // Handle auto-dismiss
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     let timer: ReturnType<typeof setTimeout>;
 
@@ -119,10 +119,10 @@ const ContactSection: React.FC = () => {
                   <FaEnvelope className="text-gray-500" />
                   <span className="text-gray-700">epic.bookmarketing@gmail.com</span>
                 </div>
-                <div className="flex items-center gap-3">
+                {/* <div className="flex items-center gap-3">
                   <FaPhone className="text-gray-500" />
                   <span className="text-gray-700">+1 (914) 583-2115</span>
-                </div>
+                </div> */}
                 <div className="flex items-center gap-3">
                   <FaMapMarkerAlt className="text-gray-500" />
                   <span className="text-gray-700">New York, NY</span>
