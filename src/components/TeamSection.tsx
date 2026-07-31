@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { GoDotFill } from "react-icons/go";
 import { SiGmail } from "react-icons/si";
-import { david, deborah, emily, jd, marcus, sarah } from "../assets";
+import { david, deborah, emily, jd, azlarrey, sarah } from "../assets";
 
 interface TeamMember {
   id: number;
@@ -24,10 +24,10 @@ const TeamSection: React.FC = () => {
     },
     {
       id: 2,
-      name: "Marcus Walker",
-      image: marcus,
+      name: "Azlarrey W.",
+      image: azlarrey,
       role: "Media Buyer",
-      description: "Marcus has managed over $1k in ad spend across Facebook, Amazon, and Google, consistently achieving 3-5x ROAS for book campaigns.",
+      description: "Azlarrey is a website developer, book marketer, also managed over $1k in ad spend across Facebook, Amazon, and Google for book campaigns",
     },
     {
       id: 3,
